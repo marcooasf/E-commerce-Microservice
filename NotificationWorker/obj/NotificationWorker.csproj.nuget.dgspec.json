@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\NotificationWorker\\NotificationWorker.csproj": {}
+  },
+  "projects": {
+    "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\NotificationWorker\\NotificationWorker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\NotificationWorker\\NotificationWorker.csproj",
+        "projectName": "NotificationWorker",
+        "projectPath": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\NotificationWorker\\NotificationWorker.csproj",
+        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
+        "outputPath": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\NotificationWorker\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\Shared.csproj": {
+                "projectPath": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\marco\\.dotnet\\sdk\\8.0.424/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
+        "outputPath": "S:\\RIDER IDE\\Projetos estudos\\E-commerce-Microservice\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\marco\\.dotnet\\sdk\\8.0.424/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
