@@ -36,7 +36,28 @@ public class RabbitMqProducer
             routingKey: "pedidos-queue",
             body: body
         );
-        
+    }
 
+    public async Task PublicarAtualizacaoAsync(PedidoAtualizadoEvent evento)
+    {
+        var factory = new ConnectionFactory { Uri = new Uri(_uri) };
+        using var connection = await factory.CreateConnectionAsync();
+        using var chanel = await connection.CreateChannelAsync();
+
+        await chanel.QueueDeclareAsync(
+            queue: "pedidos-atualizados-queue",
+            durable: true,
+            exclusive: false,
+            autoDelete: false,
+            arguments: null);
+
+        var payload = JsonSerializer.Serialize(evento);
+        var body = Encoding.UTF8.GetBytes(payload);
+
+        await chanel.BasicPublishAsync(
+            exchange: string.Empty,
+            routingKey: "pedidos-atualizados-queue",
+            body: body
+        );
     }
 }

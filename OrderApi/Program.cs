@@ -43,4 +43,26 @@ app.MapPost("/pedidos", async (CriarPedidoRequest request, RabbitMqProducer prod
 
 });
 
+app.MapPut("/pedidos/{pedidoId}", async (Guid pedidoId, AtualizarPedidoRequest request, RabbitMqProducer producer) =>
+{
+    var pedidoAtualizadoEvento = new PedidoAtualizadoEvent
+    {
+        PedidoId = pedidoId,
+        ClienteEmail = request.ClienteEmail,
+        ClienteNome = request.ClienteNome,
+        StatusPedido = request.StatusPedido,
+        ValorTotal = request.ValorTotal,
+        DataAtualizacao = DateTime.UtcNow
+    };
+
+    await producer.PublicarAtualizacaoAsync(pedidoAtualizadoEvento);
+
+    return Results.Accepted($"/pedidos/{pedidoAtualizadoEvento.PedidoId}", new
+    {
+        Status = "Processamento de atualização iniciado",
+        Pedido = pedidoAtualizadoEvento
+    });
+    
+});
+
 app.Run();
